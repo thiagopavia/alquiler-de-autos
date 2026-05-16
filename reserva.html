@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <span class="logo-icono">
+        <img src="img/logo.png" alt="Logo RentAuto">
+      </span>
+      <div>
+        <span class="logo-nombre">RentAuto Argentina</span>
+      </div>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#vehiculos">Vehículos</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+        <li><a href="reserva.html" class="btn-nav-reservar">Reservar Vehículo</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <section class="cabecera-pagina">
+      <h1>Formulario de Reserva</h1>
+    </section>
+
+    <section class="seccion-formulario">
+
+      <div class="formulario-contenedor">
+
+        <form action="#" method="post">
+
+          <input type="hidden" name="seguimiento" value="rastreo vehiculo">
+
+          <div class="bloque-formulario">
+            <div class="bloque-titulo">
+              <div>
+                <h2>Información Personal</h2>
+              </div>
+            </div>
+
+            <div class="fila-formulario">
+
+              <div class="campo">
+                <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+                <input type="text" id="nombre" name="nombre" required>
+              </div>
+
+              <div class="campo">
+                <label for="apellido">Apellido <span class="obligatorio">*</span></label>
+                <input type="text" id="apellido" name="apellido" required>
+              </div>
+
+              <div class="campo">
+                <label for="email">Correo Electrónico <span class="obligatorio">*</span></label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="campo">
+                <label for="telefono">Número de Teléfono <span class="obligatorio">*</span></label>
+                <input type="tel" id="telefono" name="telefono" required>
+              </div>
+
+              <div class="campo">
+                <label for="documento">DNI / Pasaporte <span class="obligatorio">*</span></label>
+                <input type="text" id="documento" name="documento" required>
+              </div>
+
+              <div class="campo">
+                <label for="tipo-doc">Tipo de Documento <span class="obligatorio">*</span></label>
+                <select id="tipo-doc" name="tipo_documento" required>
+                  <option value="" disabled selected>Seleccioná...</option>
+                  <option value="dni">DNI (Argentina)</option>
+                  <option value="pasaporte">Pasaporte</option>
+                  <option value="cedula">Cédula de identidad</option>
+                  <option value="licencia-ext">Licencia extranjera</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="bloque-formulario">
+            <div class="bloque-titulo">
+              <div>
+                <h2>Información de la Reserva</h2>
+              </div>
+            </div>
+
+            <div class="fila-formulario">
+
+              <div class="campo">
+                <label for="tipo-vehiculo">Tipo de Vehículo <span class="obligatorio">*</span></label>
+                <select id="tipo-vehiculo" name="tipo_vehiculo" required>
+                  <option value="" disabled selected>Seleccioná el tipo...</option>
+                  <option value="hatchback">Auto Compacto / Hatchback</option>
+                  <option value="sedan">Auto Sedán</option>
+                  <option value="suv">SUV / Camioneta</option>
+                  <option value="pickup">Pick-Up</option>
+                  <option value="moto">Moto</option>
+                  <option value="utilitario">Utilitario / Van</option>
+                  <option value="premium">Vehículo Premium</option>
+                </select>
+              </div>
+
+              <div class="campo">
+                <label for="modelo">Modelo Seleccionado <span class="obligatorio">*</span></label>
+                <select id="modelo" name="modelo" required>
+                  <option value="" disabled selected>Seleccioná el modelo...</option>
+                  <optgroup label="Autos">
+                    <option value="polo">Volkswagen Polo </option>
+                    <option value="corolla">Toyota Corolla </option>
+                    <option value="peugeot208">Peugeot 208 </option>
+                    <option value="audia4">Audi A4</option>
+                  </optgroup>
+                  <optgroup label="SUV / Camionetas">
+                    <option value="bmwx6">BMW X6 </option>
+                    <option value="hilux">Toyota Hilux </option>
+                    <option value="wrangler">Jeep Wrangler </option>
+                  </optgroup>
+                  <optgroup label="Motos">
+                    <option value="cb500">Honda CB 500F </option>
+                    <option value="ninja400">Kawasaki Ninja 400 </option>
+                  </optgroup>
+                  <optgroup label="Utilitarios">
+                    <option value="sprinter">Mercedes-Benz Sprinter </option>
+                    <option value="ducato">Fiat Ducato </option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="campo">
+                <label for="fecha-retiro">Fecha de Retiro <span class="obligatorio">*</span></label>
+                <input type="date" id="fecha-retiro" name="fecha_retiro" required>
+              </div>
+
+              <div class="campo">
+                <label for="fecha-devolucion">Fecha de Devolución <span class="obligatorio">*</span></label>
+                <input type="date" id="fecha-devolucion" name="fecha_devolucion" required>
+              </div>
+
+              <div class="campo">
+                <label for="hora-retiro">Hora de Retiro <span class="obligatorio">*</span></label>
+                <input type="time" id="hora-retiro" name="hora_retiro" required>
+              </div>
+
+              <div class="campo">
+                <label for="sucursal">Sucursal de Retiro <span class="obligatorio">*</span></label>
+                <select id="sucursal" name="sucursal" required>
+                  <option value="" disabled selected>Seleccioná la sucursal...</option>
+                  <option value="palermo">Buenos Aires — Palermo</option>
+                  <option value="microcentro">Buenos Aires — Microcentro</option>
+                  <option value="ezeiza">Aeropuerto Ezeiza</option>
+                  <option value="aeroparque">Aeroparque Newbery</option>
+                  <option value="cordoba">Córdoba Capital</option>
+                  <option value="rosario">Rosario</option>
+                  <option value="mendoza">Mendoza</option>
+                  <option value="bariloche">San Carlos de Bariloche</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="campo" style="margin-top: 20px;">
+              <label>Método de Pago <span class="obligatorio">*</span></label>
+              <div class="grupo-radio">
+                <label class="opcion-radio">
+                  <input type="radio" name="metodo_pago" value="credito" required>
+                    Tarjeta de Crédito
+                </label>
+                <label class="opcion-radio">
+                  <input type="radio" name="metodo_pago" value="debito">
+                    Tarjeta de Débito
+                </label>
+                <label class="opcion-radio">
+                  <input type="radio" name="metodo_pago" value="transferencia">
+                    Transferencia Bancaria
+                </label>
+                <label class="opcion-radio">
+                  <input type="radio" name="metodo_pago" value="efectivo">
+                    Efectivo
+                </label>
+                <label class="opcion-radio">
+                  <input type="radio" name="metodo_pago" value="mercadopago">
+                    Mercado Pago
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="bloque-formulario">
+            <div class="bloque-titulo">
+              <div>
+                <h2>Opciones Adicionales</h2>
+              </div>
+            </div>
+
+            <div class="grilla-opciones">
+              <label class="opcion-check">
+                <input type="checkbox" name="extras" value="gps">
+                  GPS incluido
+              </label>
+              <label class="opcion-check">
+                <input type="checkbox" name="extras" value="silla-ninos">
+                  Silla para niños
+              </label>
+              <label class="opcion-check">
+                <input type="checkbox" name="extras" value="portaequipaje">
+                  Portaequipaje
+              </label>
+              <label class="opcion-check">
+                <input type="checkbox" name="extras" value="segundo-conductor">
+                  Segundo conductor
+              </label>
+              <label class="opcion-check">
+                <input type="checkbox" name="extras" value="seguro-ampliado">
+                  Seguro ampliado
+              </label>
+              <label class="opcion-check">
+                <input type="checkbox" name="extras" value="wifi">
+                  Wi-Fi a bordo
+              </label>
+              <label class="opcion-check">
+                <input type="checkbox" name="extras" value="entrega-domicilio">
+                  Entrega a domicilio
+              </label>
+              <label class="opcion-check">
+                <input type="checkbox" name="extras" value="tanque-lleno">
+                  Tanque lleno al retiro
+              </label>
+            </div>
+          </div>
+
+          <div class="bloque-formulario">
+            <div class="bloque-titulo">
+              <div>
+                <h2>Comentarios y Observaciones</h2>
+              </div>
+            </div>
+
+            <div class="campo campo-completo">
+              <label for="comentarios">Observaciones adicionales</label>
+              <textarea id="comentarios" name="comentarios"></textarea>
+            </div>
+
+            <div style="margin-top: 20px;">
+              <label class="opcion-check" style="border: none; padding: 0;">
+                <input type="checkbox" name="terminos" id="terminos" required>
+                Acepto los <a href="#" style="color: #1a2a4a; font-weight: bold;">Términos y Condiciones</a>
+                y la <a href="#" style="color: #1a2a4a; font-weight: bold;">Política de Privacidad</a>.
+                <span class="obligatorio">*</span>
+              </label>
+            </div>
+
+          </div>
+
+          <div class="formulario-botones">
+            <button type="reset" class="btn btn-limpiar">Limpiar formulario</button>
+            <button type="submit" class="btn btn-enviar">Confirmar Reserva</button>
+          </div>
+
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="contacto">
+    <div class="footer-contenido">
+
+      <div class="footer-marca">
+        <h3>RentAuto Argentina</h3>
+        <div class="redes-sociales">
+          <a href="#" class="red-social" aria-label="Facebook"><img src="img/Facebook_Logo.png" alt="Facebook logo"></a>
+          <a href="#" class="red-social" aria-label="Instagram"><img src="img/Instagram-Logo.png" alt="Instagram logo"></a>
+          <a href="#" class="red-social" aria-label="WhatsApp"><img src="img/WhatsApp_icono.webp" alt="WhatsApp logo"></a>
+        </div>
+      </div>
+
+      <div class="footer-columna">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#vehiculos">Vehículos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="reserva.html">Reservar</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-columna">
+        <h4>Contacto</h4>
+        <div class="footer-contacto">
+          <p> Av. Corrientes 1635, CABA, Buenos Aires</p>
+          <p> +54 11 4527-9406</p>
+          <p> info@rentauto.com.ar</p>
+          <p> Lun–Vie: 8:00–20:00 / Sáb–Dom: 9:00–17:00</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-fondo">
+      <p>&copy; 2026 RentAuto Argentina. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
